@@ -28,7 +28,7 @@ class StudentController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'lastName' => 'required',
-            'email' => 'required|email|unique:student',
+            'email' => 'required|email',
             'password' => 'required',
             'semester' => 'required'
 
@@ -45,6 +45,7 @@ class StudentController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
             'semester' => $request->semester
+            
         ]);
 
         if (!$student) {
@@ -90,7 +91,7 @@ class StudentController extends Controller
             $validator = Validator::make($request->all(), [
                 'name' => 'required',
                 'lastName' => 'required',
-                'email' => 'required|email|unique:student',
+                'email' => 'required|email',
                 'password' => 'required',
                 'semester' => 'required'
     
