@@ -93,7 +93,7 @@ class InscriptionsController extends Controller
                 return response()->json(['message' => 'Error al validar datos de la inscripcion'], 422);
             }
     
-            $inscriptions->name = $request->name;
+            $inscriptions->date = $request->date;
             $inscriptions->user_id = $request->user_id;
             $inscriptions->course_id = $request->course_id;
             $inscriptions->save();

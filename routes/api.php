@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\InscriptionsController;
+use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\UsuariosController;
+
 
 //Rutas Estudiantes
 Route::get('/students', [StudentController :: class, 'index']);
@@ -70,3 +73,37 @@ Route::put('/inscriptions/{id}', [InscriptionsController :: class, 'update']);
 
 
 Route::delete('/inscriptions/{id}', [InscriptionsController :: class, 'destroy']);
+
+//rutas para el login
+
+Route::get('/usuarios', [UsuariosController :: class, 'index']);
+
+
+Route::get('/usuarios/{id}', [UsuariosController :: class, 'show']);
+
+
+Route::post('/usuarios',[UsuariosController :: class, 'store'] );
+
+
+Route::put('/usuarios/{id}', [UsuariosController :: class, 'update']);
+
+
+Route::delete('/usuarios/{id}', [UsuariosController :: class, 'destroy']);
+
+//Rutas para los cursos
+
+Route::get('/courses', [CoursesController :: class, 'index']);
+
+
+Route::get('/courses/{id}', [CoursesController :: class, 'show']);
+
+
+Route::post('/courses',[CoursesController :: class, 'store'] );
+
+
+Route::put('/courses/{id}', [CoursesController :: class, 'update']);
+
+
+Route::delete('/courses/{id}', [CoursesController :: class, 'destroy']);
+
+

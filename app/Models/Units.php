@@ -10,7 +10,6 @@ class Units extends Model
 
     protected $fillable = [
         'tittle',
-        'description',
         'content',
         'course_id'
         ];
